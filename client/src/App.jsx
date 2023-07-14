@@ -1,12 +1,13 @@
 import { useState } from "react"
-import "./app.css"
+import Login from "./pages/Login"
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl bg-orange-800 font-bold underline">
-        Hello world!
-      </h1>
+      <div className="main">
+        <Login />
+      </div>
+      {/* <p className="text-3xl bg-orange-800 font-bold underline">Hello world!</p> */}
     </>
   )
 }

@@ -2,3 +2,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Background */
+/* 
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px;
+  pointer-events: none;
+} */
+
+.main:before {
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  z-index: -999;
+}
+
+.main:after,
+.main:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  background-image: url("../src/assets/images/grid.svg");
+  z-index: -999;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.input-full {
+  @apply mt-[0.5rem] w-full p-[0.75rem] leading-3  rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur focus:outline-none;
+}

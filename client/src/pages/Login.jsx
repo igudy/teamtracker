@@ -1,14 +1,17 @@
 import React from "react"
+import Google from "../assets/icons/google.svg"
+import EmployeeManagement from "../assets/images/employeemag.png"
 
 const Login = () => {
   return (
     <>
-      <div className="flex">
-        <div>
-          <h3 className="mt-[5rem] text-5xl text-bold font-space-grotesk font-medium ml-8">
+      <div className="flex flex-col sm:flex-row mx-10">
+        <div className="basis-[75%]">
+          <h3 className="mt-[5rem] text-4xl text-bold font-space-grotesk font-medium mx-10">
             Hey,
-            <span className="flex flex-row mt-10">Welcome Back!</span>
-            {/* <div className="mt-[3rem] text-3xl">Employee Management System</div> */}
+            <span className="flex flex-row mt-10 text-4xl sm:text-5xl">
+              Welcome Back!
+            </span>
           </h3>
 
           <div className="ml-8 mt-10 flex flex-col font-space-grotesk">
@@ -43,12 +46,21 @@ const Login = () => {
 
             {/* Google Sign up */}
             <div className="mt-[3rem]">
-              <h3>Login with Google</h3>
+              <div className="flex pl-3 outline outline-offset-2 outline-orange-500 hover:outline-orange-600 focus:outline-orange-600 cursor-pointer outline-2 rounded-2xl h-8">
+                <img src={Google} alt="google-icon" className="h-6 w-6 pt-1" />
+                <span className="text-xl">Login with Google</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div>Image part</div>
+        <div>
+          <img
+            src={EmployeeManagement}
+            alt="employeemanagement_illustration"
+            className="md:mt-12"
+          />
+        </div>
       </div>
     </>
   )

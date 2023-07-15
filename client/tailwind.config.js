@@ -5,6 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+        screens: {
+      'xs': '480px', //extra small screen
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+    },
     extend: {
       fontFamily: {
         'space-grotesk': ['Space Grotesk', 'sans-serif'],

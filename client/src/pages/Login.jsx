@@ -1,8 +1,31 @@
-import React from "react"
+import React, { useState } from "react"
+import axios from "axios"
+
+// Images import
 import Google from "../assets/icons/google.svg"
 import EmployeeManagement from "../assets/images/employeemag.png"
 
 const Login = () => {
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+  })
+  console.log(values)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    axios
+      .post("", values)
+      .then((response) => {
+        // Handle success
+        console.log(response.data)
+      })
+      .catch((error) => {
+        // Handle error
+        console.error(error)
+      })
+  }
+
   return (
     <>
       <div className="flex flex-col sm:flex-row mx-10">
@@ -17,32 +40,39 @@ const Login = () => {
           <div className="ml-8 mt-10 flex flex-col font-space-grotesk">
             {/* Input part */}
             {/*Email  */}
-            <label htmlFor="email" className="pl-1">
-              Email
-            </label>
-            <input
-              className="input-full"
-              placeholder="Enter Email"
-              name="email"
-              autoComplete="off"
-            />
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="email" className="pl-1">
+                Email
+              </label>
+              <input
+                className="input-full"
+                placeholder="Enter Email"
+                name="email"
+                onChange={(e) =>
+                  setValues({ ...values, email: e.target.value })
+                }
+                autoComplete="off"
+              />
 
-            {/* Password */}
-            <label htmlFor="password" className="pl-1 mt-4">
-              Password
-            </label>
-            <input
-              type="password"
-              placeholder="Enter Password"
-              name="password"
-              className="input-full"
-              autoComplete="off"
-            />
-
-            {/* Button */}
-            <button className="w-full bg-orange-500 hover:bg-orange-600 rounded-md text-white mt-10 h-10 text-center">
-              Login
-            </button>
+              {/* Password */}
+              <label htmlFor="password" className="pl-1 mt-4">
+                Password
+              </label>
+              <input
+                type="password"
+                placeholder="Enter Password"
+                name="password"
+                className="input-full"
+                autoComplete="off"
+                onChange={(e) =>
+                  setValues({ ...values, password: e.target.value })
+                }
+              />
+              {/* Button */}
+              <button className="w-full bg-orange-500 hover:bg-orange-600 rounded-md text-white mt-10 h-10 text-center">
+                Login
+              </button>
+            </form>
 
             {/* Google Sign up */}
             <div className="mt-[3rem]">

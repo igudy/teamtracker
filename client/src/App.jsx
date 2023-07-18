@@ -7,7 +7,6 @@ function App() {
       <div className="main">
         <Login />
       </div>
-      {/* <p className="text-3xl bg-orange-800 font-bold underline">Hello world!</p> */}
     </>
   )
 }

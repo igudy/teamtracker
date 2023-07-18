@@ -3,6 +3,7 @@ import axios from "axios"
 
 // Images import
 import Google from "../assets/icons/google.svg"
+import GitHub from "../assets/icons/github.svg"
 import EmployeeManagement from "../assets/images/employeemag.png"
 
 const Login = () => {
@@ -37,37 +38,44 @@ const Login = () => {
             </span>
           </h3>
 
-          <div className="ml-8 mt-10 flex flex-col font-space-grotesk">
+          <div className="ml-8 mt-12 flex flex-col font-space-grotesk">
             {/* Input part */}
             {/*Email  */}
             <form onSubmit={handleSubmit}>
               <label htmlFor="email" className="pl-1">
                 Email
               </label>
-              <input
-                className="input-full"
-                placeholder="Enter Email"
-                name="email"
-                onChange={(e) =>
-                  setValues({ ...values, email: e.target.value })
-                }
-                autoComplete="off"
-              />
+              <div className="mt-0.5">
+                <input
+                  className="input-full"
+                  placeholder="Enter Email"
+                  name="email"
+                  onChange={(e) =>
+                    setValues({ ...values, email: e.target.value })
+                  }
+                  autoComplete="off"
+                />
+              </div>
 
               {/* Password */}
-              <label htmlFor="password" className="pl-1 mt-4">
-                Password
-              </label>
-              <input
-                type="password"
-                placeholder="Enter Password"
-                name="password"
-                className="input-full"
-                autoComplete="off"
-                onChange={(e) =>
-                  setValues({ ...values, password: e.target.value })
-                }
-              />
+              <div className="mt-2">
+                <label htmlFor="password" className="pl-1">
+                  Password
+                </label>
+              </div>
+
+              <div className="mt-.5">
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  name="password"
+                  className="input-full"
+                  autoComplete="off"
+                  onChange={(e) =>
+                    setValues({ ...values, password: e.target.value })
+                  }
+                />
+              </div>
               {/* Button */}
               <button className="w-full bg-orange-500 hover:bg-orange-600 rounded-md text-white mt-10 h-10 text-center">
                 Login
@@ -75,10 +83,16 @@ const Login = () => {
             </form>
 
             {/* Google Sign up */}
-            <div className="mt-[3rem]">
-              <div className="flex pl-3 outline outline-offset-2 outline-orange-500 hover:outline-orange-600 focus:outline-orange-600 cursor-pointer outline-2 rounded-2xl h-8">
-                <img src={Google} alt="google-icon" className="h-6 w-6 pt-1" />
-                <span className="text-xl">Login with Google</span>
+            <div className="mt-[3rem] flex flex-row text-center justify-center align-middle">
+              <div className="flex px-5 mr-10 outline outline-offset-2 outline-orange-500 hover:outline-orange-600 focus:outline-orange-600 cursor-pointer outline-2 rounded-2xl h-6">
+                <img src={Google} alt="google-icon" className="h-5 w-5 pt-1" />
+                <span className="text-md">Login with Google</span>
+              </div>
+
+              {/* Github */}
+              <div className="flex px-5 ml-10 outline outline-offset-2 outline-orange-500 hover:outline-orange-600 focus:outline-orange-600 cursor-pointer outline-2 rounded-2xl h-6">
+                <img src={GitHub} alt="google-icon" className="h-5 w-5 pt-1" />
+                <span className="text-md">Login with Github</span>
               </div>
             </div>
           </div>

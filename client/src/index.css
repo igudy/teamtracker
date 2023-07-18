@@ -20,13 +20,13 @@ body {
   pointer-events: none;
 } */
 
-.main:before {
+body:before {
   background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
   z-index: -999;
 }
 
-.main:after,
-.main:before {
+body:after,
+body:before {
   position: absolute;
   content: "";
   width: 100%;
@@ -34,7 +34,7 @@ body {
   top: 0;
 }
 
-.main:after {
+body:after {
   background-image: url("../src/assets/images/grid.svg");
   z-index: -999;
   opacity: 0.4;

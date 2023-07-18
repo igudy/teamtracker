@@ -1,4 +1,4 @@
-import { CustomAPIError } from '../errors.js';
+// import { CustomAPIError } from '../errors/index';
 import { StatusCodes } from 'http-status-codes';
 
 const errorHandlerMiddleware = (err, req, res, next) => {

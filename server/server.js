@@ -1,22 +1,37 @@
 // import 'express-async-errors';
-
 // security packages
 // import xss from 'xss-clean';
 // import rateLimiter from 'express-rate-limiter';
 import helmet from 'helmet';
 import cors from 'cors';
-
-import express from 'express';
-import dotenv from 'dotenv';
-dotenv.config();
-
-const app = express();
-app.use(cors());
-app.use(cookieParser());
-app.use(express.json());
 // Database connection
 import connectDB from './db/connect.js'
 import cookieParser from 'cookie-parser';
+import express from 'express';
+import dotenv from 'dotenv';
+// Error handler
+import notFoundMiddleware from './middleware/not-found.js'
+import errorHandlerMiddleware from './middleware/error-handler.js';
+
+dotenv.config();
+const app = express();
+
+app.use(express.json());
+// extra packages
+
+// routes
+app.get('/', (req, res) => {
+  res.send('Employee api');
+});
+
+app.use(notFoundMiddleware);
+app.use(errorHandlerMiddleware);
+
+
+// app.use(cors());
+// app.use(cookieParser());
+// app.use(express.json());
+
 
 const port = process.env.PORT || 5000;
 

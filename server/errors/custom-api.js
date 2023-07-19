@@ -3,5 +3,4 @@ class CustomAPIError extends Error {
     super(message)
   }
 }
-
-export default CustomAPIError;
+export default CustomAPIError

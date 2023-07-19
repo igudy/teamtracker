@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 // Images import
 import Google from "../assets/icons/google.svg"
@@ -81,6 +82,13 @@ const Login = () => {
                 Login
               </button>
             </form>
+
+            <p className="mt-3 text-gray-800">
+              You don't have an account?{" "}
+              <Link to="/register" className="text-blue-800 underline">
+                Sign Up
+              </Link>
+            </p>
 
             {/* Google Sign up */}
             <div className="mt-[3rem] flex flex-row text-center justify-center align-middle">

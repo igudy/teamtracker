@@ -1,9 +1,9 @@
 const register = async (req, res) => {
-    res.send("Register user")
-}
+    res.send("Register user");
+};
 
 const login = async (req, res) => {
-    res.send("Login User")
-}
+    res.send("Login User");
+};
 
-export {register, login}
+export { register, login };

@@ -9,6 +9,9 @@ app.use(express.json());
 // connectDB
 import connectDB from './db/connect.js';
 
+// authentication
+import authenticatedUser from './middleware/authentication.js';
+
 // routers
 import authRouter  from './routes/auth.js';
 import employeeRouter  from './routes/employee.js';
@@ -19,14 +22,13 @@ import errorHandlerMiddleware from './middleware/error-handler.js';
 
 // extra packages
 
-
 // routes
 app.use('/api/v1/auth', authRouter)
-app.use('/api/v1/employees', employeeRouter)
+app.use('/api/v1/employees', authenticatedUser, employeeRouter)
 
 // routes
 app.get('/', (req, res) => {
-  res.send('jobs api');
+  res.send('Employee API');
 });
 
 app.use(notFoundMiddleware);

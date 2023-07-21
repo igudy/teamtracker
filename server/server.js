@@ -14,7 +14,7 @@ import authenticateEmployee from './middleware/authentication.js';
 
 // routers
 import authRouter  from './routes/auth.js';
-import employeeRouter  from './routes/employee.js';
+import postRouter  from './routes/post.js';
 
 // error handler
 import notFoundMiddleware from './middleware/not-found.js';
@@ -24,7 +24,7 @@ import errorHandlerMiddleware from './middleware/error-handler.js';
 
 // routes
 app.use('/api/v1/auth', authRouter)
-app.use('/api/v1/employees', authenticateEmployee, employeeRouter)
+app.use('/api/v1/posts', authenticateEmployee, postRouter)
 
 // routes
 app.get('/', (req, res) => {

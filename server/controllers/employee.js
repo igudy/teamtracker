@@ -7,7 +7,7 @@ const getEmployee = async (req, res) => {
 }
 
 const createEmployee = async (req, res) => {
-    res.send("Create Employee")
+    res.json(req.employee)
 }
 
 const updateEmployee = async (req, res) => {
@@ -18,4 +18,4 @@ const deleteEmployee = async (req, res) => {
     res.send("Delete Employee")
 }
 
-export {getAllEmployees, getEmployee, createEmployee, updateEmployee, deleteEmployee}
+export { getAllEmployees, getEmployee, createEmployee, updateEmployee, deleteEmployee }

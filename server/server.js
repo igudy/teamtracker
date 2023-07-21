@@ -10,7 +10,7 @@ app.use(express.json());
 import connectDB from './db/connect.js';
 
 // authentication
-import authenticatedUser from './middleware/authentication.js';
+import authenticateEmployee from './middleware/authentication.js';
 
 // routers
 import authRouter  from './routes/auth.js';
@@ -24,7 +24,7 @@ import errorHandlerMiddleware from './middleware/error-handler.js';
 
 // routes
 app.use('/api/v1/auth', authRouter)
-app.use('/api/v1/employees', authenticatedUser, employeeRouter)
+app.use('/api/v1/employees', authenticateEmployee, employeeRouter)
 
 // routes
 app.get('/', (req, res) => {

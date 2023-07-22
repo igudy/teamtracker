@@ -6,7 +6,7 @@ import {
   createPost,
   updatePost,
   deletePost
-} from '../controllers/Post.js';
+} from '../controllers/posts.js';
 
 router.route('/').post(createPost).get(getAllPosts)
 router.route('/:id').get(getPost).patch(updatePost).delete(deletePost);

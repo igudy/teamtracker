@@ -1,32 +1,21 @@
 import mongoose from "mongoose";
+import Employee from './Employee.js'
 
 // If you want to use subdocument schema for the date
-// const dateSchema = new mongoose.Schema({
-//   day: {
-//     type: Number,
-//     required: true,
-//   },
-//   month: {
-//     type: Number,
-//     required: true,
-//   },
-//   year: {
-//     type: Number,
-//     required: true,
-//   },
-// });
-
-// usage 
-// const newPost = new Post({
-//   title: 'New Post',
-//   description: 'This is a new post description.',
-//   tags: ['tag1', 'tag2', 'tag3'],
-//   date: {
-//     day: 20,
-//     month: 7,
-//     year: 2023,
-//   },
-// });
+const dateSchema = new mongoose.Schema({
+  day: {
+    type: Number,
+    required: true,
+  },
+  month: {
+    type: Number,
+    required: true,
+  },
+  year: {
+    type: Number,
+    required: true,
+  },
+});
 
 const PostSchema = new mongoose.Schema({
     title: {
@@ -48,18 +37,19 @@ const PostSchema = new mongoose.Schema({
     // },
     
     tags: {
-    type: [String], // Use an array of Strings for tags
+    type: [String],
     required: [true, 'Please provide at least one tag'],
     },
+
     date: {
-        type: Date,
-        default: Date.now, // Sets the date to the current date and time by default
+        type: dateSchema,
+        // default: Date.now
     },
-    createdBy: {
-        type: mongoose.Types.ObjectId,
-        ref: 'Employee',
-        required: [true, 'Please provide an employee'],
-    }
+  createdBy: {
+    type: mongoose.Types.ObjectId,
+    ref: 'Employee',
+    required: [true, 'Please provide an employee'],
+  },
 }, { timestamps: true })
 
 const Post = mongoose.model('Post', PostSchema);

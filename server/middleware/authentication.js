@@ -12,8 +12,8 @@ import UnauthenticatedError from '../errors/index.js';
 
     try {
         const payload = jwt.verify(token, process.env.JWT_SECRET)
-        // attach the employee to the job routes
-        req.employee = {employeeId: payload.employee, name: payload.name}
+        // attach the employee to the post routes
+        req.employee = {employeeId: payload.employeeId, name: payload.name}
     next()
   } catch (error) {
     throw new UnauthenticatedError('Authentication invalid')

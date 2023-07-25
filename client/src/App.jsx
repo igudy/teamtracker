@@ -1,5 +1,6 @@
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import EmployeeBlog from "./pages/EmployeeBlog"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/employee-blog" element={<EmployeeBlog />} />
       </Routes>
     </BrowserRouter>
   )

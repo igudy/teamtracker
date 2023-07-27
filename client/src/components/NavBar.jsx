@@ -8,8 +8,7 @@ const NavBar = () => {
     <div className="w-full p-[10px] px-10 flex justify-between items-center">
       <div className="flex">
         <img src={logo} className="h-[40px]" />
-
-        <span className="text-left font-black text-3xl font-space-grotesk mt-1 text-orange-600">
+        <span className="hidden font-space-grotesk mt-1  font-black text-3xl text-gray-500 text-left xl:block lg:block md:block">
           TeamTracker++
         </span>
       </div>

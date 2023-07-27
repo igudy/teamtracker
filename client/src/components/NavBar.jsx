@@ -13,17 +13,17 @@ const NavBar = () => {
         </span>
       </div>
       <div>
-        <ul className="hidden md:flex">
-          <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out">
+        <ul className="hidden md:flex font-semibold">
+          <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
             <a href="#">Home</a>
           </li>
-          <li className="menuItem hover:scale-110">
+          <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
             <a href="#">Profile</a>
           </li>
-          <li className="menuItem hover:scale-110">
+          <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
             <a href="#">About</a>
           </li>
-          <li className="menuItem hover:scale-110">
+          <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
             <a href="#">Contact Us</a>
           </li>
         </ul>
@@ -63,17 +63,17 @@ const NavBar = () => {
           )}
 
           {toggle ? (
-            <ul className="md:hidden absolute flex mt-8 flex-col bg-gray-200 p-2 rounded-sm">
-              <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out">
+            <ul className="md:hidden absolute flex mt-8 flex-col bg-gray-200 p-2 rounded-sm z-[9999]">
+              <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
                 <a href="#">Home</a>
               </li>
-              <li className="menuItem hover:scale-110">
+              <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
                 <a href="#">Profile</a>
               </li>
-              <li className="menuItem hover:scale-110">
+              <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
                 <a href="#">About</a>
               </li>
-              <li className="menuItem hover:scale-110">
+              <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
                 <a href="#">Contact Us</a>
               </li>
             </ul>

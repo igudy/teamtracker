@@ -2,6 +2,8 @@ import React from "react"
 import NavBar from "../components/NavBar"
 import Blog from "../components/Blog"
 import Hero from "../components/Hero"
+import Footer from "../components/Footer"
+import Pagination from "../components/Pagination"
 
 const EmployeeBlog = () => {
   return (
@@ -9,6 +11,8 @@ const EmployeeBlog = () => {
       <NavBar />
       <Hero />
       <Blog />
+      <Pagination />
+      <Footer />
     </>
   )
 }

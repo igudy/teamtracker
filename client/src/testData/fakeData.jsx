@@ -6,7 +6,7 @@ const blogPosts = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Blog Post 1",
     tag: "Technology",
-    createdAt: "2023-07-24T10:30:00Z",
+    createdAt: "14th June, 2023",
     createdBy: "John Doe",
   },
   {
@@ -16,7 +16,7 @@ const blogPosts = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Blog Post 2",
     tag: "Travel",
-    createdAt: "2023-07-23T15:45:00Z",
+    createdAt: "14th July, 2023",
     createdBy: "Jane Smith",
   },
   {
@@ -26,7 +26,7 @@ const blogPosts = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Blog Post 3",
     tag: "Food",
-    createdAt: "2023-07-22T08:00:00Z",
+    createdAt: "14th December, 2023",
     createdBy: "Alex Johnson",
   },
   {
@@ -36,7 +36,7 @@ const blogPosts = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Blog Post 4",
     tag: "Lifestyle",
-    createdAt: "2023-07-21T14:20:00Z",
+    createdAt: "12th September, 2023",
     createdBy: "Emily Brown",
   },
   {
@@ -46,7 +46,7 @@ const blogPosts = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Blog Post 5",
     tag: "Health",
-    createdAt: "2023-07-20T11:10:00Z",
+    createdAt: "1st June, 2023",
     createdBy: "Michael Lee",
   },
   {
@@ -56,7 +56,7 @@ const blogPosts = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Blog Post 6",
     tag: "Fashion",
-    createdAt: "2023-07-19T09:00:00Z",
+    createdAt: "12th November, 2023",
     createdBy: "Sophia Clark",
   },
   {
@@ -66,7 +66,7 @@ const blogPosts = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Blog Post 7",
     tag: "Nature",
-    createdAt: "2023-07-18T12:40:00Z",
+    createdAt: "14th January, 2023",
     createdBy: "William Turner",
   },
 ]

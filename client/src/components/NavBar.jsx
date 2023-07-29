@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import logo from "../assets/images/tt-logo.png"
+import { Link } from "react-router-dom"
+import EmployeeBlog from "../pages/EmployeeBlog"
 
 const NavBar = () => {
   const [toggle, setToggle] = useState(false)
@@ -7,18 +9,21 @@ const NavBar = () => {
   return (
     <div className="w-full font-space-grotesk p-[10px] px-10 flex justify-between items-center">
       <div className="flex">
-        <img src={logo} className="h-[40px]" />
+        <Link to="/employee-blog">
+          <img src={logo} className="h-[40px]" />
+        </Link>
         <span className="hidden font-space-grotesk mt-1  font-black text-3xl text-black text-left xl:block lg:block md:block">
           TeamTracker++
         </span>
       </div>
+
       <div>
         <ul className="hidden md:flex font-semibold">
           <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
             <a href="#">Home</a>
           </li>
           <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
-            <a href="#">Profile</a>
+            <Link to="/profile">Profile</Link>
           </li>
           <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
             <a href="#">About</a>
@@ -68,7 +73,7 @@ const NavBar = () => {
                 <a href="#">Home</a>
               </li>
               <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
-                <a href="#">Profile</a>
+                <Link to="/profile">Profile</Link>
               </li>
               <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
                 <a href="#">About</a>

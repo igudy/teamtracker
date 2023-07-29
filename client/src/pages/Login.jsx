@@ -91,22 +91,23 @@ const Login = () => {
             </p>
 
             {/* Google Sign up */}
-            <div className="mt-[3rem] flex flex-row text-center justify-center align-middle">
-              <div className="flex px-5 mr-10 outline outline-offset-2 outline-orange-500 hover:outline-orange-600 focus:outline-orange-600 cursor-pointer outline-2 rounded-2xl h-6">
-                <img src={Google} alt="google-icon" className="h-5 w-5 pt-1" />
-                <span className="text-md">Login with Google</span>
+            <div className="mt-[3rem] flex flex-col md:flex-row xl:flex-row w-full justify-center align-middle gap-[20%]">
+              <div className="flex flex-row flex-wrap outline outline-offset-2 outline-orange-500 hover:outline-orange-600 focus:outline-orange-600 cursor-pointer outline-2 rounded-2xl h-6 px-4">
+                <img src={Google} alt="google-icon" className="h-6" />
+                <span className="pl-2">Login with Google</span>
               </div>
 
+              {/* px-5 ml-10 outline outline-offset-2 outline-orange-500 hover:outline-orange-600 focus:outline-orange-600 cursor-pointer outline-2 rounded-2xl h-6 */}
               {/* Github */}
-              <div className="flex px-5 ml-10 outline outline-offset-2 outline-orange-500 hover:outline-orange-600 focus:outline-orange-600 cursor-pointer outline-2 rounded-2xl h-6">
-                <img src={GitHub} alt="google-icon" className="h-5 w-5 pt-1" />
-                <span className="text-md">Login with Github</span>
+              <div className="flex flex-row flex-wrap outline outline-offset-2 outline-orange-500 hover:outline-orange-600 focus:outline-orange-600 cursor-pointer outline-2 rounded-2xl h-6 px-4 my-9 md:my-0 lg:my-0 xl:my-0">
+                <img src={GitHub} alt="google-icon" className="h-6" />
+                <span className="pl-2">Login with Github</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div>
+        <div className="hidden lg:block xl:block">
           <img
             src={EmployeeManagement}
             alt="employeemanagement_illustration"

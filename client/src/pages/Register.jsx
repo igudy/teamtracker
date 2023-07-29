@@ -32,7 +32,7 @@ const Register = () => {
   return (
     <>
       <div className="flex flex-col sm:flex-row mx-10">
-        <div>
+        <div className="hidden lg:block xl:block">
           <img
             src={EmployeeManagement}
             alt="employeemanagement_illustration"

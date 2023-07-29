@@ -3,8 +3,10 @@ import blogPosts from "../testData/fakeData"
 
 const Blog = () => {
   return (
-    <div className="mx-2 font-space-grotesk">
-      <div className="text-2xl font-bold">Recent Posts</div>
+    <div className="xl:mx-16 mx-2 text-xs xl:text-sm lg:text-sm sm:text-xs md:text-sm">
+      <h2 className="text-lg lg:text-3xl md:text-2xl ml-3 font-bold">
+        Recent Posts
+      </h2>
       <div className="flex-row xl:flex lg:flex">
         <div className="flex-col basis-[75%]">
           {blogPosts.map((post) => (
@@ -17,13 +19,18 @@ const Blog = () => {
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="rounded-full h-14"
+                  className="rounded-full h-10"
                 />
                 <div className="ml-4">
-                  <h1 className="text-xl font-bold">{post.title}</h1>
-                  <span className="flex-col">
+                  <h1 className="text-sm md:text-sm lg:text-md font-bold">
+                    {post.title}
+                  </h1>
+                  <span className="flex-col text-sm md:text-sm lg:text-md">
                     {post.createdBy}
-                    <span className="text-sm"> - {post.createdAt}</span>
+                    <span className="text-sm md:text-sm lg:text-md">
+                      {" "}
+                      - {post.createdAt}
+                    </span>
                   </span>
                 </div>
               </div>
@@ -38,8 +45,13 @@ const Blog = () => {
           <div className="text-2xl font-bold mt-1">Tags</div>
           {blogPosts.map((post) => (
             //   <div key={post.id} className="border-2 my-3 pl-3">
-            <div key={post.id} className=" ">
-              <h3>{post.tag}</h3>
+            <div
+              key={post.id}
+              className="border-2 rounded my-3 pl-3 border-gray-400 hover:border-orange-500 cursor-pointer"
+            >
+              <div className="">
+                <h3 className=" m-2 rounded">{post.tag}</h3>
+              </div>
             </div>
           ))}
         </div>

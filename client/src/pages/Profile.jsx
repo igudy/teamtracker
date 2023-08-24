@@ -1,14 +1,11 @@
 import React from "react"
-import Footer from "../components/Footer"
-import NavBar from "../components/NavBar"
-import ProfileComponent from "../components/ProfileComponent"
 
 const Profile = () => {
+
+
   return (
     <div>
-      <NavBar />
-      <ProfileComponent />
-      <Footer />
+      <h1>This is the profile page</h1>
     </div>
   )
 }
